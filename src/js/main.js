@@ -1,4 +1,4 @@
-let reportsWidget = {
+const reportsWidget = {
     options: {
         containerSelector: '.reports',
         template: (
@@ -35,7 +35,7 @@ let reportsWidget = {
     },
 
     renderReports: function(reports) {
-        let inst = this,
+        const inst = this,
             options = inst.options;
 
         $(options.containerSelector).html(Mustache.render(options.template, reports));
